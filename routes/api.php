@@ -31,6 +31,6 @@ Route::get('/departamento/{depto}', function($departamento) {
 });
 
 Route::get('departamento/{depto}/municipio/{muni}', function($departamento,$municipio){
-    $zonas = Zona::where('departamento','=',$departamento)->where('municipio','=',$municipio)->get();
+    $zonas = Zona::select('idZona','descripcion')->where('departamento','=',$departamento)->where('municipio','=',$municipio)->get();
     return $zonas;
 });
