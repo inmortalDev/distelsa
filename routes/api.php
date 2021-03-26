@@ -23,3 +23,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/departamentos', function() {
     return Departamento::all();
 });
+
+Route::get('/departamento/{depto}', function($departamento) {
+    $departament= Departamento::where('departamento','=',$departamento)->get(); 
+    return $departament;
+});
