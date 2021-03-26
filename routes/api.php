@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Departamento;
+use App\Models\Zona;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,4 +28,9 @@ Route::get('/departamentos', function() {
 Route::get('/departamento/{depto}', function($departamento) {
     $departament= Departamento::where('departamento','=',$departamento)->get(); 
     return $departament;
+});
+
+Route::get('departamento/{depto}/municipio/{muni}', function($departamento,$municipio){
+    $zonas = Zona::where('departamento','=',$departamento)->where('municipio','=',$municipio)->get();
+    return $zonas;
 });
