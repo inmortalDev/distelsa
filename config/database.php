@@ -49,7 +49,7 @@ return [
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'my_db_disteval'),
-            'username' => env('DB_USERNAME', 'phpmyadmin'),
+            'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', 'ubuntu1234'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
